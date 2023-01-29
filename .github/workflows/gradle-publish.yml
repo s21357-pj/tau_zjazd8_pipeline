@@ -30,5 +30,8 @@ jobs:
     - name: Run chmod to make gradlew executable
       run: chmod +x ./gradlew
       
+    - name: Run chmod to make geckodriver executable
+      run: chmod +x resources/geckodriver
+      
     - name: Run Tests
-      run: ./gradlew test --debug
+      run: ./gradlew test
