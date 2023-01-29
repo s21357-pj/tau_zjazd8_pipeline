@@ -22,6 +22,11 @@ jobs:
         java-version: '16'
         distribution: 'corretto'
         cache: gradle
+    - name: Setup firefox
+      uses: browser-actions/setup-firefox@v1
+      with:
+        firefox-version: 'latest'
+    - run: firefox --version
     - name: Run chmod to make gradlew executable
       run: chmod +x ./gradlew
       
